@@ -3,6 +3,9 @@
 ```bash
 go build iconic.go
 ./iconic  #uses default.png in directory to generate output
+
+# Or to provide some other named png file
+./iconic path/to/some_other_png.png
 ```
 
 ####Output
