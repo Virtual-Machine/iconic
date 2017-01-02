@@ -16,7 +16,12 @@ type IconOut struct {
 }
 
 func main() {
-    file, err := os.Open("default.png") // Open default 1024 by 1024 icon
+    target := "default.png"
+    if len(os.Args) > 1 {
+        target = os.Args[1]
+    }
+
+    file, err := os.Open(target) // Open 1024 by 1024 icon
     if err != nil {
         log.Fatal(err)
     }
