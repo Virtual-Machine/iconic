@@ -55,7 +55,7 @@ func main() {
     filenames := []IconOut{out16, out16x2, out32, out32x2, out64, out64x2, out128, out128x2, out256, out256x2, out512, out512x2}
 
     for _, i := range filenames {
-        out, err := os.Create(i.filename)
+        out, err := os.Create("output/" + i.filename)
         if err != nil {
             log.Fatal(err)
         }
